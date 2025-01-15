@@ -4,7 +4,12 @@
 #include <vector>
 #include "Carte.h"
 
-class Paquet {
+class Paquet 
+{
+private:
+    std::vector<Carte> cartes;
+    void initialiserPaquet();
+
 public:
     Paquet();
     void melanger();
@@ -12,9 +17,7 @@ public:
     bool estVide() const;
     int getTaille() const;
 
-private:
-    std::vector<Carte> cartes;
-    void initialiserPaquet();
+
 };
 
 #endif // PAQUET_H

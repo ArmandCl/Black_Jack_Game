@@ -18,7 +18,7 @@ public:
 
     //Afficher une carte
     void displayCard(const Carte& carte) const;
-    std::string toString() const; //return value + " of " + color;
+    std::string toString() const;
 
 };
 
