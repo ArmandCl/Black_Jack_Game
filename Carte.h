@@ -17,7 +17,7 @@ public:
     std::string getValue() const;
 
     //Afficher une carte
-    void displayCard(const Carte& carte) const;
+    void displayCard() const;
     std::string toString() const;
 
 };

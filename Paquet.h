@@ -15,7 +15,8 @@ public:
     void melanger();
     Carte tirerCarte();
     bool estVide() const;
-    int getTaille() const;
+    int getTaillePaquet() const;
+    void displayPaquet() const;
 
 
 };

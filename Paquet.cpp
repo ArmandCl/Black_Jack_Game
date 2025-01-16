@@ -43,6 +43,13 @@ bool Paquet::estVide() const{
     return cartes.empty();
 }
 
-int Paquet::getTaille() const{
+int Paquet::getTaillePaquet() const{
     return cartes.size();
 }
+
+void Paquet::displayPaquet() const {
+    for (const Carte& carte : cartes) { // Parcourir toutes les cartes
+        carte.displayCard();          // Afficher chaque carte
+    }
+}
+

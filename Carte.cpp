@@ -17,8 +17,8 @@ std::string Carte::getValue() const{
 
 
 //Affichage
-void Carte::displayCard(const Carte& carte) const{
-    std::cout << carte.value << " of " << carte.color;
+void Carte::displayCard() const{
+    std::cout << value << " of " << color << std::endl;
 }
 
 std::string Carte::toString() const{
