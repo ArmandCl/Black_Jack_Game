@@ -20,11 +20,12 @@ private:
     std::string name;  
     std::vector<Carte> hand;
     int chips;
+    int mise;
     Choix choix; // Choix du joueur
 
 
 public:
-    Joueur(std::string name, std::vector<Carte> hand, int chips);
+    Joueur(std::string name, std::vector<Carte> hand, int chips, int mise, Choix choix);
     
     // Gestion des cartes
     void ajouterCarte(const Carte& nouvelleCarte);
@@ -37,19 +38,26 @@ public:
     void afficherNom() const;
     void afficherMain() const;
     void afficherScore() const;
+    void afficherMise() const;
+
+    //Getter
+    std::string getNom() const;
+    std::vector<Carte> getMain() const;
+    int getChips() const;
+    int getMise() const;
+    Choix getChoix() const;
+    int getPlayerHandSize() const;
+
 
     // Gestion des jetons
     void miserJetons(int montant);
     void gagnerJetons(int montant);
-    int getJetons() const;
 
     //Action du joueur
     void setChoix(Choix nouveauChoix);
-    Choix getChoix() const;
 
     // Vérifications
     bool mainEstVide() const;
-    int getPlayerHandSize() const;
 
 };
 
