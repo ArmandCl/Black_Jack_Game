@@ -6,7 +6,7 @@
 
 #include "Carte.h"
 
-enum Choix {
+enum Action {
     TIRER,   // Tirer une carte
     ARRETER, // Arrêter (finir le tour)
     SPLIT,   // Split (séparer les cartes en deux mains)
@@ -21,11 +21,11 @@ private:
     std::vector<Carte> hand;
     int chips;
     int mise;
-    Choix choix; // Choix du joueur
+    Action action; // Acti du joueur
 
 
 public:
-    Joueur(std::string name, std::vector<Carte> hand, int chips, int mise, Choix choix);
+    Joueur(std::string name, std::vector<Carte> hand, int chips, int mise, Action action);
     
     // Gestion des cartes
     void ajouterCarte(const Carte& nouvelleCarte);
@@ -45,7 +45,7 @@ public:
     std::vector<Carte> getMain() const;
     int getChips() const;
     int getMise() const;
-    Choix getChoix() const;
+    Action getAction() const;
     int getPlayerHandSize() const;
 
 
@@ -54,7 +54,7 @@ public:
     void gagnerJetons(int montant);
 
     //Action du joueur
-    void setChoix(Choix nouveauChoix);
+    void setAction(Action nouvelleAction);
 
     // Vérifications
     bool mainEstVide() const;

@@ -5,7 +5,7 @@
 #include "Carte.h"
 
 
-Joueur::Joueur(std::string name, std::vector<Carte> hand, int chips, int mise, Choix choix) : name(name), hand(hand),chips(chips), mise(mise), choix(choix) {}
+Joueur::Joueur(std::string name, std::vector<Carte> hand, int chips, int mise, Action Action) : name(name), hand(hand),chips(chips), mise(mise), action(action) {}
 
 
 ////////    Gestion des cartes    ////////
@@ -62,8 +62,8 @@ int Joueur::getMise() const{
     return mise;
 }
 
-Choix Joueur::getChoix() const {
-    return choix;
+Action Joueur::getAction() const {
+    return action;
 }
 
 int Joueur::getPlayerHandSize() const{
@@ -82,8 +82,8 @@ void Joueur::gagnerJetons(int montant){
 
 
 ////////    Action du joueur   ////////
-void Joueur::setChoix(Choix nouveauChoix){
-    choix = nouveauChoix;
+void Joueur::setChoix(Action nouvelleAction){
+    action = nouvelleAction;
 }
 
 
