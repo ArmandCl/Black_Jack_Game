@@ -19,10 +19,10 @@ void Joueur::viderMain(){
 
 
 ////////    Calcul    ////////
-int Joueur::calculerScore() const{
+//int Joueur::calculerScore() const{
     //voir comment faire.
     //cette fonction semble être la meme que getChips parce que le score c'est juste l'entier "chips" donc à voir...
-}
+//}
 
 
 ////////    Affichage    ////////
@@ -82,7 +82,7 @@ void Joueur::gagnerJetons(int montant){
 
 
 ////////    Action du joueur   ////////
-void Joueur::setChoix(Action nouvelleAction){
+void Joueur::setAction(Action nouvelleAction){
     action = nouvelleAction;
 }
 

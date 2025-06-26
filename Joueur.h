@@ -7,6 +7,7 @@
 #include "Carte.h"
 
 enum Action {
+    WAIT,     // Pour quand on initialise le joueur dans main
     TIRER,   // Tirer une carte
     ARRETER, // Arrêter (finir le tour)
     SPLIT,   // Split (séparer les cartes en deux mains)
