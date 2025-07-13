@@ -17,9 +17,11 @@ void Paquet::initialiserPaquet(){
     std::string colors[] = {"Heart", "Spade", "Diamond", "Club"};
     std::string values[] = {"As", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
 
-    for (const auto& color : colors) {
-        for (int value = 0; value < 13; ++value) { // 0 correspond à "As" dans le tableau values
-            cartes.push_back(Carte(color, values[value])); // Appel du constructeur Carte
+    for(int nbr_paquet = 0; nbr_paquet < 6; ++nbr_paquet) { // 6 paquets de cartes on fait la regle des casino
+        for (const auto& color : colors) {
+            for (int value = 0; value < 13; ++value) { // 0 correspond à "As" dans le tableau values
+                cartes.push_back(Carte(color, values[value])); // Appel du constructeur Carte
+            }
         }
     }
 }
