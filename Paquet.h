@@ -4,7 +4,7 @@
 #include <vector>
 #include "Carte.h"
 
-class Paquet 
+class Paquet
 {
 private:
     std::vector<Carte> cartes;
@@ -17,8 +17,6 @@ public:
     bool estVide() const;
     int getTaillePaquet() const;
     void displayPaquet() const;
-
-
 };
 
 #endif // PAQUET_H
